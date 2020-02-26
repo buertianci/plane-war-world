@@ -62,11 +62,11 @@ class EnemyPlane(object):
 
     def move(self):
         if self.direction == "right":
-            self.x += 7
-            self.y += 4
+            self.x += 4
+            self.y += 1
         elif self.direction == "left":
-            self.x -= 7
-            self.y += 4
+            self.x -= 4
+            self.y += 1
 
         if self.x > 480 - 50:
             self.direction = "left"
@@ -90,7 +90,7 @@ class Bullet(object):
         self.screen.blit(self.image, (self.x, self.y))
 
     def move(self):
-        self.y -= 20
+        self.y -= 10
 
     def judge(self):
         if self.y < 0:
